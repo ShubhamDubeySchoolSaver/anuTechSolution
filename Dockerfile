@@ -1,12 +1,20 @@
-#Using offical maven image as a parent image
-FROM golang:alpine as build
+FROM golang:alpine
 
-#Setting the working directory to /app
+# Set the working directory inside the container
 WORKDIR /app
-MAINTAINER Vinayak
-#Copy the current directory contents into the container at current directory
+
+# Copy the current directory contents into the container
 COPY . .
+
+# Install necessary dependencies
 RUN go get github.com/go-sql-driver/mysql
 RUN go get github.com/natefinch/lumberjack
-#Install the mvn command for maven 
+
+# Build the Go application
 RUN go build -o main .
+
+# Expose the port the app runs on
+EXPOSE 8080
+
+# Command to run the executable
+CMD ["./main"]
