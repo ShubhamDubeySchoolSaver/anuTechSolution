@@ -1,0 +1,123 @@
+2024/09/19 23:46:49 main.go:11: Server started at 8080 port
+2024/09/20 00:01:46 main.go:11: Server started at 8080 port
+2024/09/20 00:07:00 main.go:11: Server started at 8080 port
+2024/09/20 00:11:54 main.go:11: Server started at 8080 port
+2024/09/20 00:13:03 InsertUserDetailsHandlers.go:13: Inside InsertUserDetailsHandler
+2024/09/20 00:13:03 InsertUserDetailsModel.go:14: database connection failure sql: unknown driver "mysql" (forgotten import?)
+2024/09/20 00:13:03 InsertUserDetailsHandlers.go:22: DbConnection Error
+2024/09/20 00:19:43 main.go:11: Server started at 8080 port
+2024/09/20 00:19:50 InsertUserDetailsHandlers.go:13: Inside InsertUserDetailsHandler
+2024/09/20 00:19:50 InsertUserDetailsHandlers.go:22: UserDetails Successfully Inserted
+2024/09/20 19:51:29 main.go:11: Server started at 8080 port
+2024/09/20 19:51:44 InsertUserDetailsHandlers.go:13: Inside InsertUserDetailsHandler
+2024/09/20 19:51:44 InsertUserDetailsModel.go:11: Inside InsertUserDetailsModel
+2024/09/20 19:51:44 InsertUserDetailsHandlers.go:22: UserDetails Successfully Inserted
+2024/09/20 19:54:01 main.go:11: Server started at 8080 port
+2024/09/20 19:54:09 InsertUserDetailsHandlers.go:13: Inside InsertUserDetailsHandler
+2024/09/20 19:54:09 InsertUserDetailsModel.go:11: Inside InsertUserDetailsModel
+2024/09/20 19:54:09 InsertUserDetailsHandlers.go:22: Our Team Will Contact Soon...!
+2024/09/25 23:47:41 main.go:11: Server started at 8080 port
+2024/09/25 23:53:24 UpsertCandidateDetailsHandlers.go:12: File Upload Endpoint Hit
+2024/09/25 23:53:24 UpsertCandidateDetailsHandlers.go:27: Uploaded File: iFIX-API (1).pdf
+2024/09/25 23:53:24 UpsertCandidateDetailsHandlers.go:28: File Size: 1303809
+2024/09/25 23:53:24 UpsertCandidateDetailsHandlers.go:29: MIME Header: map[Content-Disposition:[form-data; name="myFile"; filename="iFIX-API (1).pdf"] Content-Type:[application/pdf]]
+2024/09/25 23:53:24 UpsertCandidateDetailsModel.go:51: File successfully saved at: ../src/public/iFIX-API (1)_20240925.pdf
+2024/09/25 23:53:24 UpsertCandidateDetailsDao.go:11: Inside Upload File Dao function
+2024/09/26 00:05:47 main.go:11: Server started at 8080 port
+2024/09/26 00:05:53 UpsertCandidateDetailsHandlers.go:13: File Upload Endpoint Hit
+2024/09/26 00:05:53 UpsertCandidateDetailsHandlers.go:28: Uploaded File: iFIX-API (1).pdf
+2024/09/26 00:05:53 UpsertCandidateDetailsHandlers.go:29: File Size: 1303809
+2024/09/26 00:05:53 UpsertCandidateDetailsHandlers.go:30: MIME Header: map[Content-Disposition:[form-data; name="myFile"; filename="iFIX-API (1).pdf"] Content-Type:[application/pdf]]
+2024/09/26 00:05:53 UpsertCandidateDetailsModel.go:56: File successfully saved at: /home/g4/Documents/SkoolSaver_BackEnd/ifix/resource/downloads/iFIX-API (1)_20240926.pdf
+2024/09/26 00:05:53 UpsertCandidateDetailsDao.go:11: Inside Upload File Dao function
+2024/09/26 00:06:56 main.go:11: Server started at 8080 port
+2024/09/26 00:07:01 UpsertCandidateDetailsHandlers.go:13: File Upload Endpoint Hit
+2024/09/26 00:07:01 UpsertCandidateDetailsHandlers.go:28: Uploaded File: iFIX-API (1).pdf
+2024/09/26 00:07:01 UpsertCandidateDetailsHandlers.go:29: File Size: 1303809
+2024/09/26 00:07:01 UpsertCandidateDetailsHandlers.go:30: MIME Header: map[Content-Disposition:[form-data; name="myFile"; filename="iFIX-API (1).pdf"] Content-Type:[application/pdf]]
+2024/09/26 00:07:01 UpsertCandidateDetailsModel.go:56: File successfully saved at: /home/g4/Documents/SkoolSaver_BackEnd/src/public/iFIX-API (1)_20240926.pdf
+2024/09/26 00:07:01 UpsertCandidateDetailsDao.go:11: Inside Upload File Dao function
+2024/09/26 10:56:44 main.go:11: Server started at 8080 port
+2024/09/26 11:01:01 main.go:11: Server started at 8080 port
+2024/09/26 11:01:12 LoginModel.go:16: Inside Login Model
+2024/09/26 11:01:12 LoginModel.go:28: Login Details :  [{admin YWRtaW4=}]
+2024/09/26 11:01:12 LoginDao.go:38: Inside UpdateLoginTime Dao
+2024/09/26 11:01:12 LoginHandlers.go:21: User LoggedIn Succesfully
+2024/09/26 11:02:42 LoginModel.go:16: Inside Login Model
+2024/09/26 11:02:42 LoginModel.go:28: Login Details :  [{admin YWRtaW4=}]
+2024/09/26 11:02:42 LoginDao.go:38: Inside UpdateLoginTime Dao
+2024/09/26 11:02:42 LoginHandlers.go:21: User LoggedIn Succesfully
+2024/09/26 11:04:14 main.go:11: Server started at 8080 port
+2024/09/26 11:04:21 LoginModel.go:16: Inside Login Model
+2024/09/26 11:04:21 LoginModel.go:28: Login Details :  [{admin YWRtaW4=}]
+2024/09/26 11:04:21 LoginDao.go:38: Inside UpdateLoginTime Dao
+2024/09/26 11:04:21 LoginHandlers.go:21: User LoggedIn Succesfully
+2024/09/26 11:10:08 main.go:11: Server started at 8080 port
+2024/09/26 11:10:13 LoginModel.go:16: Inside Login Model
+2024/09/26 11:10:13 LoginModel.go:28: Login Details :  [{admin YWRtaW4=}]
+2024/09/26 11:10:13 LoginDao.go:38: Inside UpdateLoginTime Dao
+2024/09/26 11:10:13 LoginHandlers.go:21: 
+2024/09/26 11:10:31 main.go:11: Server started at 8080 port
+2024/09/26 11:10:36 LoginModel.go:16: Inside Login Model
+2024/09/26 11:10:36 LoginModel.go:28: Login Details :  [{admin YWRtaW4=}]
+2024/09/26 11:10:36 LoginDao.go:38: Inside UpdateLoginTime Dao
+2024/09/26 11:10:36 LoginHandlers.go:21: User LoggedIn Succesfully
+2024/09/28 09:38:43 main.go:11: Server started at 8080 port
+2024/09/28 09:38:53 LoginModel.go:16: Inside Login Model
+2024/09/28 09:38:53 LoginModel.go:28: Login Details :  [{admin YWRtaW4=}]
+2024/09/28 09:38:53 LoginDao.go:38: Inside UpdateLoginTime Dao
+2024/09/28 09:38:53 LoginHandlers.go:21: User LoggedIn Succesfully
+2024/09/28 09:40:23 UpsertCandidateDetailsHandlers.go:13: File Upload Endpoint Hit
+2024/09/28 09:40:23 UpsertCandidateDetailsHandlers.go:23: Error Retrieving the File
+2024/09/28 09:40:23 UpsertCandidateDetailsHandlers.go:24: http: no such file
+2024/09/28 09:41:30 UpsertCandidateDetailsHandlers.go:13: File Upload Endpoint Hit
+2024/09/28 09:41:30 UpsertCandidateDetailsHandlers.go:28: Uploaded File: medic.pdf
+2024/09/28 09:41:30 UpsertCandidateDetailsHandlers.go:29: File Size: 27296
+2024/09/28 09:41:30 UpsertCandidateDetailsHandlers.go:30: MIME Header: map[Content-Disposition:[form-data; name="myFile"; filename="medic.pdf"] Content-Type:[application/pdf]]
+2024/09/28 09:41:30 UpsertCandidateDetailsModel.go:56: File successfully saved at: /home/g4/Documents/SkoolSaver_BackEnd/src/public/medic_20240928.pdf
+2024/09/28 09:41:30 UpsertCandidateDetailsDao.go:11: Inside Upload File Dao function
+2024/09/28 09:49:24 InsertQuotationModel.go:12: Inside InsertQuotationModel
+2024/09/28 09:49:24 InsertQuotationHandlers.go:21: Our Team Will Contact Soon...!
+2024/09/28 10:50:58 main.go:11: Server started at 8080 port
+2024/09/28 11:03:44 main.go:11: Server started at 8080 port
+2024/09/28 11:04:42 FetchGetInTouchModel.go:11: Inside InsertQuotationModel
+2024/09/28 11:51:12 main.go:11: Server started at 8080 port
+2024/09/28 11:51:37 FetchGetInTouchModel.go:11: Inside InsertQuotationModel
+2024/09/28 11:51:37 FetchGetInTouchDao.go:14: FetchGetInTouchDao Query Execution error : Error 1054 (42S22): Unknown column 'id' in 'field list'
+2024/09/28 11:51:37 FetchGetInTouchModel.go:21: FetchGetInTouchDao Details Fetch error : fetchGetInTouchDao Query Execution error
+2024/09/28 11:51:41 FetchGetInTouchModel.go:11: Inside InsertQuotationModel
+2024/09/28 11:51:41 FetchGetInTouchDao.go:14: FetchGetInTouchDao Query Execution error : Error 1054 (42S22): Unknown column 'id' in 'field list'
+2024/09/28 11:51:41 FetchGetInTouchModel.go:21: FetchGetInTouchDao Details Fetch error : fetchGetInTouchDao Query Execution error
+2024/09/28 11:52:57 main.go:11: Server started at 8080 port
+2024/09/28 11:53:01 FetchGetInTouchModel.go:11: Inside InsertQuotationModel
+2024/09/28 11:53:57 FetchGetInTouchModel.go:11: Inside InsertQuotationModel
+2024/09/28 12:08:18 main.go:11: Server started at 8080 port
+2024/09/28 12:08:44 main.go:11: Server started at 8080 port
+2024/09/28 12:09:58 main.go:11: Server started at 8080 port
+2024/09/28 12:10:03 FetchGetInTouchModel.go:30: Inside FetchJobAppliedCandidatesModels
+2024/09/28 12:18:16 main.go:11: Server started at 8080 port
+2024/09/28 12:18:29 FetchGetInTouchModel.go:30: Inside FetchJobAppliedCandidatesModels
+2024/09/28 12:19:10 FetchGetInTouchModel.go:30: Inside FetchJobAppliedCandidatesModels
+2024/09/28 14:03:48 main.go:11: Server started at 8080 port
+2024/09/28 14:04:23 FetchGetInTouchModel.go:49: Inside FetchConsultationsModels
+2024/09/28 14:41:54 main.go:11: Server started at 8080 port
+2024/09/28 14:43:38 InsertUserDetailsHandlers.go:41: Inside UploadJobHandlers
+2024/09/28 14:43:38 InsertUserDetailsHandlers.go:46: json: cannot unmarshal number into Go struct field JobEntity.experience of type string
+2024/09/28 14:43:50 InsertUserDetailsHandlers.go:41: Inside UploadJobHandlers
+2024/09/28 14:43:50 InsertUserDetailsModel.go:29: Inside UploadJobModel
+2024/09/28 14:43:50 InsertUserDetailsHandlers.go:50: Job Posted Successfully
+2024/09/28 14:44:28 main.go:11: Server started at 8080 port
+2024/09/28 14:45:03 InsertUserDetailsHandlers.go:41: Inside UploadJobHandlers
+2024/09/28 14:45:03 InsertUserDetailsModel.go:29: Inside UploadJobModel
+2024/09/28 14:45:03 InsertUserDetailsHandlers.go:50: Job Posted Successfully
+2024/09/28 14:53:56 main.go:11: Server started at 8080 port
+2024/09/28 14:55:29 UpsertCandidateDetailsHandlers.go:14: File Upload Endpoint Hit
+2024/09/28 14:55:29 UpsertCandidateDetailsHandlers.go:29: Uploaded File: medic.pdf
+2024/09/28 14:55:29 UpsertCandidateDetailsHandlers.go:30: File Size: 27296
+2024/09/28 14:55:29 UpsertCandidateDetailsHandlers.go:31: MIME Header: map[Content-Disposition:[form-data; name="myFile"; filename="medic.pdf"] Content-Type:[application/pdf]]
+2024/09/28 14:55:29 UpsertCandidateDetailsModel.go:56: File successfully saved at: /home/g4/Documents/SkoolSaver_BackEnd/src/public/medic_20240928.pdf
+2024/09/28 14:55:29 UpsertCandidateDetailsDao.go:11: Inside Upload File Dao function
+2024/09/28 15:03:02 main.go:11: Server started at 8080 port
+2024/09/28 15:03:14 FetchGetInTouchModel.go:30: Inside FetchJobAppliedCandidatesModels
+2024/09/28 15:14:14 main.go:11: Server started at 8080 port
+2024/09/28 15:16:01 FetchGetInTouchModel.go:68: Inside FetchJobsModels
