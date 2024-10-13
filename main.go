@@ -4,10 +4,17 @@ import (
 	"Skool_Saver/src/logger"
 	router "Skool_Saver/src/routers"
 	"net/http"
+	"os"
 )
 
 func main() {
 	router.NewRouter()
-	logger.Log.Println("Server started at 8080 port")
-	logger.Log.Fatal(http.ListenAndServe(":8080", nil))
+
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8080" // fallback to 8080 if PORT is not set
+	}
+
+	logger.Log.Printf("Server starting on port %s", port)
+	logger.Log.Fatal(http.ListenAndServe(":"+port, nil))
 }
