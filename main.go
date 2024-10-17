@@ -9,23 +9,32 @@ import (
 )
 
 func main() {
-	// Initialize database connection
+	// Log the deployment starting
+	logger.Log.Println("Starting deployment...")
+
+	// Initialize the database connection
 	db, err := config.ConnectMySqlDbSlaveSingleton()
 	if err != nil {
-		logger.Log.Fatal("Failed to connect to the database:", err)
+		// Log if there is an issue with the database connection
+		logger.Log.Fatalf("Error connecting to the database: %v", err)
 	}
 	defer db.Close()
 
-	// Set up the router
+	// Log successful database connection
+	logger.Log.Println("Database connection established")
+
+	// Initialize the router
 	router.NewRouter()
 
-	// Get port from environment variable, fallback to 8080
+	// Set up the server port
 	port := os.Getenv("PORT")
 	if port == "" {
-		port = "8080" // fallback to port 8080 if not set
+		port = "8080" // Fallback to port 8080 if not set
 	}
 
-	// Start the server
+	// Log the server startup
 	logger.Log.Printf("Server starting on port %s", port)
+
+	// Start the HTTP server and log any fatal errors
 	logger.Log.Fatal(http.ListenAndServe(":"+port, nil))
 }
