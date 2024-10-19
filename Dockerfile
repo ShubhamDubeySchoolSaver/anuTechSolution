@@ -29,7 +29,7 @@ RUN apk add --no-cache mysql-client
 COPY data.sql /docker-entrypoint-initdb.d/data.sql
 
 # Add the database URL as an environment variable (customize as needed)
-ENV MYSQL_HOST=mysql.railway.internal
+ENV MYSQL_HOST=host.docker.internal
 ENV MYSQL_USER=root
 ENV MYSQL_PASSWORD=FOmbtmYqkOmVAzEJXcBbIYfKScUHwAkr
 ENV MYSQL_DATABASE=skool_saver
