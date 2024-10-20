@@ -35,6 +35,9 @@ ENV MYSQL_PASSWORD=FOmbtmYqkOmVAzEJXcBbIYfKScUHwAkr
 ENV MYSQL_DATABASE=skool_saver
 ENV MYSQL_PORT=27122
 
+# Ensure the log directory exists
+RUN mkdir -p /app/log
+
 # Expose the application's port
 EXPOSE 8080
 
