@@ -5,7 +5,7 @@ import (
     "fmt"
     "log"
     "os"
-    "os/exec"
+
     _ "github.com/go-sql-driver/mysql"
 )
 
@@ -20,7 +20,7 @@ func ConnectMySqlDbSlaveSingleton() (*sql.DB, error) {
     dbPort := os.Getenv("MYSQL_PORT")
     dbName := os.Getenv("MYSQL_DATABASE")
 
-    // Log the environment variables (without sensitive info like password)
+    // Log the connection details (without sensitive information like password)
     log.Printf("MYSQL_USER: %s", dbUser)
     log.Printf("MYSQL_HOST: %s", dbHost)
     log.Printf("MYSQL_PORT: %s", dbPort)
@@ -29,42 +29,22 @@ func ConnectMySqlDbSlaveSingleton() (*sql.DB, error) {
     // Build the Data Source Name (DSN)
     dsn := fmt.Sprintf("%s:%s@tcp(%s:%s)/%s", dbUser, dbPassword, dbHost, dbPort, dbName)
 
-    log.Printf("Attempting to connect to MySQL with DSN: %s", dsn)  // Log the DSN (again, no password)
-
-    if dbconnslave == nil {
-        db, err := sql.Open(dbDriver, dsn)
-        if err != nil {
-            log.Printf("Failed to connect to the database: %v", err)
-            return nil, err
-        }
-
-        err = db.Ping()
-        if err != nil {
-            log.Printf("Failed to ping the database: %v", err)
-            return nil, err
-        }
-
-        log.Println("Successfully connected to the MySQL database")
-        dbconnslave = db
-
-        // Run the SQL script after connection
-        ExecuteSQLScript()
+    // Attempt to connect to the database
+    db, err := sql.Open(dbDriver, dsn)
+    if err != nil {
+        log.Fatalf("Failed to connect to the database: %v", err)
+        return nil, err
     }
+
+    // Ping the database to ensure connection is valid
+    err = db.Ping()
+    if err != nil {
+        log.Fatalf("Failed to ping the database: %v", err)
+        return nil, err
+    }
+
+    log.Println("Successfully connected to the MySQL database")
+    dbconnslave = db
 
     return dbconnslave, nil
-}
-
-func ExecuteSQLScript() {
-    // Command to run the SQL script
-    scriptPath := "/docker-entrypoint-initdb.d/data.sql"
-    cmd := exec.Command("mysql", "-h", os.Getenv("MYSQL_HOST"), "-u", os.Getenv("MYSQL_USER"),
-        fmt.Sprintf("-p%s", os.Getenv("MYSQL_PASSWORD")), os.Getenv("MYSQL_DATABASE"), "-e", fmt.Sprintf("source %s", scriptPath))
-
-    // Run the command
-    err := cmd.Run()
-    if err != nil {
-        log.Fatalf("Error executing SQL script: %v", err)
-    } else {
-        log.Println("SQL script executed successfully")
-    }
 }
