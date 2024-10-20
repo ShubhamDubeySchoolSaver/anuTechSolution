@@ -22,11 +22,11 @@ WORKDIR /root/
 # Copy the Go binary from the builder stage
 COPY --from=build /app/main .
 
-# Install MySQL client to run SQL script
-RUN apk add --no-cache mysql-client
-
-# Copy the SQL script into the container
+# Copy the SQL script into the container (if needed for later execution)
 COPY data.sql /docker-entrypoint-initdb.d/data.sql
+
+# Create the log directory and set permissions
+RUN mkdir -p /app/log && chmod -R 777 /app/log
 
 # Add the database URL as environment variables
 ENV MYSQL_HOST=autorack.proxy.rlwy.net
@@ -34,9 +34,6 @@ ENV MYSQL_USER=root
 ENV MYSQL_PASSWORD=FOmbtmYqkOmVAzEJXcBbIYfKScUHwAkr
 ENV MYSQL_DATABASE=skool_saver
 ENV MYSQL_PORT=27122
-
-# Ensure the log directory exists
-RUN mkdir -p /app/log
 
 # Expose the application's port
 EXPOSE 8080
