@@ -17,11 +17,13 @@ RUN go build -o main .
 # Use a minimal base image to reduce size
 FROM alpine:latest
 
-# Set the working directory to /app
 WORKDIR /app
 
 # Copy the Go binary from the builder stage
 COPY --from=build /app/main .
+
+# Install MySQL client to run SQL script
+RUN apk add --no-cache mysql-client
 
 # Create the log directory and set permissions
 RUN mkdir -p /app/log && chmod -R 777 /app/log
