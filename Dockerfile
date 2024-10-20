@@ -17,13 +17,11 @@ RUN go build -o main .
 # Use a minimal base image to reduce size
 FROM alpine:latest
 
-WORKDIR /root/
+# Set the working directory to /app
+WORKDIR /app
 
 # Copy the Go binary from the builder stage
 COPY --from=build /app/main .
-
-# Copy the SQL script into the container (if needed for later execution)
-COPY data.sql /docker-entrypoint-initdb.d/data.sql
 
 # Create the log directory and set permissions
 RUN mkdir -p /app/log && chmod -R 777 /app/log
