@@ -25,11 +25,6 @@ COPY --from=build /app/main .
 # Create the log directory and set permissions
 RUN mkdir -p /app/log && chmod -R 777 /app/log
 
-ENV MYSQL_HOST=autorack.proxy.rlwy.net
-ENV MYSQL_USER=root
-ENV MYSQL_PASSWORD=FOmbtmYqkOmVAzEJXcBbIYfKScUHwAkr
-ENV MYSQL_DATABASE=skool_saver
-ENV MYSQL_PORT=27122
 
 # Expose the application's port
 EXPOSE 8080
