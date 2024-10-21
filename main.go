@@ -12,7 +12,7 @@ func main() {
     // Log the deployment starting
     logger.Log.Println("Starting deployment...")
 
-    // Initialize the database connection (and execute SQL script)
+    
     db, err := config.ConnectMySqlDbSlaveSingleton()
     if err != nil {
         // Log if there is an issue with the database connection
