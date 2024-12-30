@@ -19,7 +19,7 @@ FROM alpine:latest
 
 WORKDIR /app
 
-# Copy the Go binary from the builder stage
+# Copy the Go binary from the builder stages
 COPY --from=build /app/main .
 
 # Create the log directory and set permissions
